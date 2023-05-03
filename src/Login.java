@@ -9,6 +9,8 @@ public class Login {
     private JTextField textField1;
     private JPanel panelLogin;
     private JPasswordField passwordField1;
+    private JButton BotonRegistro;
+
     public Login() {
         //ACCION DEL BOTON PARA INGRESAR LOS DATOS
         OKButton.addActionListener(new ActionListener() {
@@ -44,6 +46,13 @@ public class Login {
                 if (e.getExtendedKeyCode() == KeyEvent.VK_ENTER) {
                     passwordField1.requestFocus();
                 }
+            }
+        });
+        BotonRegistro.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) { //Esto es para que se conecte al otro form y sea visible
+                Registro RE = new Registro();
+                RE.setVisible(true);
             }
         });
     }
